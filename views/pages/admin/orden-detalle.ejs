@@ -1,0 +1,27 @@
+<div class="mx-3">
+  <h2 class="py-2">Detalles de la orden</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>orden nº:</th>
+        <th>Fotos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% details.forEach(detail => { %>
+      <tr>
+        <td><%=detail.id%></td>
+        <td><%=detail.orden%></td>
+        <td>
+          <img
+            src="/images/fotos/<%=detail.foto%>.jpg"
+            width="500"
+            class="wf-10"
+          />
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

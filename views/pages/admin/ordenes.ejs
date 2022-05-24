@@ -1,0 +1,24 @@
+<div class="mx-3">
+  <h2 class="py-2">Ordenes del cliente</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>fecha</th>
+        <th>total comprados</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% ordenes.forEach(orden => { %>
+      <tr>
+        <td>
+          <a href="/admin/orden-detalle/<%=orden.id%>"><%=orden.id%></a>
+        </td>
+
+        <td><%=orden.fecha%></td>
+        <td><%=orden.total%></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
